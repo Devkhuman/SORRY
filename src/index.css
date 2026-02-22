@@ -7,9 +7,20 @@ html {
 }
 
 body {
-  @apply m-0 min-h-screen bg-cream bg-glow font-body text-plum;
+  @apply m-0 min-h-screen bg-cream font-body text-plum antialiased;
 }
 
-::selection {
-  @apply bg-lavender/60 text-plum;
+* {
+  @apply selection:bg-lavender/60 selection:text-plum;
+}
+
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+
+  button,
+  a {
+    cursor: none;
+  }
 }
